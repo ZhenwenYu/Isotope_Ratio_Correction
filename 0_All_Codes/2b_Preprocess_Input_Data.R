@@ -219,6 +219,48 @@ percentage_error_vs_intensity_results <- percentage_error_vs_intensity_results[!
 # Print the results
 print(percentage_error_vs_intensity_results)
 
+#############################################
+### Based on the printed results, when both M0 and M1 intensity are >= 1e7, their 
+### ratio in a slice is usually accurate, here is some additional confirmation
+#############################################
+
+range_larger7 <- c(7.0, 11.0)
+median_larger7 <- calculate_medians(df_by_slice_combined, "min_log_m0m1_intensity_sub_b", "expression", range_larger7)
+
+
+# Function to calculate sdfor a given intensity_sub_b column and expression
+calculate_sd <- function(df, log_intensity_col, expression_col, ranges) {
+  sapply(1:(length(ranges) - 1), function(i) {
+    lower_bound <- ranges[i]
+    upper_bound <- ranges[i + 1]
+    subset <- df %>%
+      filter(!!sym(log_intensity_col) >= lower_bound & !!sym(log_intensity_col) < upper_bound)
+    sd(subset[[expression_col]], na.rm = TRUE)
+  })
+}
+sd_larger7 <- calculate_sd(df_by_slice_combined, "min_log_m0m1_intensity_sub_b", "expression", range_larger7)
+
+print(paste0("We can observe that the > E7 M1 measured intensity is very similar to the true intensity, error = ", median_larger7))
+print(paste0("and sd = ", sd_larger7))
+# The 0.27 sd may looks bad in the first glance. However, a typical peak usually has
+# 50 slices, so the final integrated ration will have sd = 0.04 (0.27*50^0.5)
+
+# A futher look on historgram to find out the distribution is 
+ratios <- suppressWarnings(as.numeric(unlist(expression)))
+larger7v <- df_by_slice_combined$min_log_m0m1_intensity_sub_b >= 7
+larger7v[is.na(larger7v)] <- FALSE
+
+plot <- unlist(expression)[df_by_slice_combined$min_log_m0m1_intensity_sub_b >= 7]
+plot <- plot[is.finite(plot) & plot >= -1 & plot <= 2] 
+
+hist(plot, breaks = seq(-1, 2, length.out = 201),
+     main = "Expression (min_log_m0m1_intensity_sub_b ≥ 7)",
+     xlab = "Expression")
+abline(v = 0, col = "red", lwd = 2, lty = 2)
+
+#############################################################
+# Next we we want to confirm if we we choose 1e7 to divide low and high intensity slices data, how many slices will we have
+
 # Identify the minimal intensity that makes ratio of two Mn of a slice to be accurate
 target_rows <- which(abs(percentage_error_vs_intensity_results$median_expression) <= percentage_error_cutoff)
 if (length(target_rows) > 0) {
@@ -733,6 +775,12 @@ save(df_by_mn_high, file = "df_by_mn_high_2b.RData")
 save(df_by_mn_low, file = "df_by_mn_low_2b.RData")
 df_by_slice <- df_by_slice_combined
 save(df_by_slice, file = "df_by_slice_2b.RData")
+
+# save space for github upload
+rm(df_by_slice_combined) 
+rm(df_raw)
+rm(df_removed)
+rm(df_by_slice_raw)
 
 # Print summary
 red <- function(x) paste0("\033[31m", x, "\033[0m")
