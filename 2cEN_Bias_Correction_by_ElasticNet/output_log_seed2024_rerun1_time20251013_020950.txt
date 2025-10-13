@@ -1,0 +1,647 @@
+
+
+> #########################################
+> #######################################
+> 
+> 
+> #######################################
+> ############## .... [TRUNCATED] 
+------------------------------------------------------
+Start running trial 1 out of total trials 1 by using random seed 2024 
+The used inner cross-validation fold is 3 
+The used number of trees in random forest training is 2000 
+The used depth of trees in random forest training is 5 
+------------------------------------------------------
+Uncorrected Mean Absolute Error of M1 RIA (%): 21.64302 
+Uncorrected Median Absolute Error of M1 RIA (%): 21.10212 
+Uncorrected sd of M1 RIA (%): 16.45435 
+Uncorrected Mean Absolute Error of M2 RIA (%): 43.78708 
+Uncorrected Median Absolute Error of M2 RIA (%): 46.64116 
+Uncorrected sd of M2 RIA (%): 15.67623 
+Inspecting data types before training...
+ num [1:68664, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
+Starting initial training on high-intensity data...
++ Fold1: alpha=0.0, lambda=200 
+- Fold1: alpha=0.0, lambda=200 
++ Fold1: alpha=0.1, lambda=200 
+- Fold1: alpha=0.1, lambda=200 
++ Fold1: alpha=0.2, lambda=200 
+- Fold1: alpha=0.2, lambda=200 
++ Fold1: alpha=0.3, lambda=200 
+- Fold1: alpha=0.3, lambda=200 
++ Fold1: alpha=0.4, lambda=200 
+- Fold1: alpha=0.4, lambda=200 
++ Fold1: alpha=0.5, lambda=200 
+- Fold1: alpha=0.5, lambda=200 
++ Fold1: alpha=0.6, lambda=200 
+- Fold1: alpha=0.6, lambda=200 
++ Fold1: alpha=0.7, lambda=200 
+- Fold1: alpha=0.7, lambda=200 
++ Fold1: alpha=0.8, lambda=200 
+- Fold1: alpha=0.8, lambda=200 
++ Fold1: alpha=0.9, lambda=200 
+- Fold1: alpha=0.9, lambda=200 
++ Fold1: alpha=1.0, lambda=200 
+- Fold1: alpha=1.0, lambda=200 
++ Fold2: alpha=0.0, lambda=200 
+- Fold2: alpha=0.0, lambda=200 
++ Fold2: alpha=0.1, lambda=200 
+- Fold2: alpha=0.1, lambda=200 
++ Fold2: alpha=0.2, lambda=200 
+- Fold2: alpha=0.2, lambda=200 
++ Fold2: alpha=0.3, lambda=200 
+- Fold2: alpha=0.3, lambda=200 
++ Fold2: alpha=0.4, lambda=200 
+- Fold2: alpha=0.4, lambda=200 
++ Fold2: alpha=0.5, lambda=200 
+- Fold2: alpha=0.5, lambda=200 
++ Fold2: alpha=0.6, lambda=200 
+- Fold2: alpha=0.6, lambda=200 
++ Fold2: alpha=0.7, lambda=200 
+- Fold2: alpha=0.7, lambda=200 
++ Fold2: alpha=0.8, lambda=200 
+- Fold2: alpha=0.8, lambda=200 
++ Fold2: alpha=0.9, lambda=200 
+- Fold2: alpha=0.9, lambda=200 
++ Fold2: alpha=1.0, lambda=200 
+- Fold2: alpha=1.0, lambda=200 
++ Fold3: alpha=0.0, lambda=200 
+- Fold3: alpha=0.0, lambda=200 
++ Fold3: alpha=0.1, lambda=200 
+- Fold3: alpha=0.1, lambda=200 
++ Fold3: alpha=0.2, lambda=200 
+- Fold3: alpha=0.2, lambda=200 
++ Fold3: alpha=0.3, lambda=200 
+- Fold3: alpha=0.3, lambda=200 
++ Fold3: alpha=0.4, lambda=200 
+- Fold3: alpha=0.4, lambda=200 
++ Fold3: alpha=0.5, lambda=200 
+- Fold3: alpha=0.5, lambda=200 
++ Fold3: alpha=0.6, lambda=200 
+- Fold3: alpha=0.6, lambda=200 
++ Fold3: alpha=0.7, lambda=200 
+- Fold3: alpha=0.7, lambda=200 
++ Fold3: alpha=0.8, lambda=200 
+- Fold3: alpha=0.8, lambda=200 
++ Fold3: alpha=0.9, lambda=200 
+- Fold3: alpha=0.9, lambda=200 
++ Fold3: alpha=1.0, lambda=200 
+- Fold3: alpha=1.0, lambda=200 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 1, lambda = 1e-06 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=1, lambda=0.0202 
+- Fold1: alpha=1, lambda=0.0202 
++ Fold2: alpha=1, lambda=0.0202 
+- Fold2: alpha=1, lambda=0.0202 
++ Fold3: alpha=1, lambda=0.0202 
+- Fold3: alpha=1, lambda=0.0202 
+Aggregating results
+Fitting final model on full training set
+i0 training completed.
+Training Performance (high-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 13.4441 
+Training Median APE Error: 9.837062 
+Test Mean APE Error: 12.18958 
+Test Median APE Error: 8.676363 
+Super Off Training Values (APE > 50%):
+1151 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+136 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 15.45502 
+Training Median APE Error: 3.710889 
+Test Mean APE Error: 12.228 
+Test Median APE Error: 4.02067 
+Super Off Training Values (APE > 50%):
+906 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+122 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 13.93591 
+Training Median APE Error: 9.216437 
+Test Mean APE Error: 12.2014 
+Test Median APE Error: 8.119636 
+Super Off Training Values (APE > 50%):
+2057 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+258 out of 11965 test Mn Signals are > 50% off.
+Inspecting data types before training...
+ num [1:90894, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
+Starting initial training on all-intensity data...
++ Fold1: alpha=0.0, lambda=200 
+- Fold1: alpha=0.0, lambda=200 
++ Fold1: alpha=0.1, lambda=200 
+- Fold1: alpha=0.1, lambda=200 
++ Fold1: alpha=0.2, lambda=200 
+- Fold1: alpha=0.2, lambda=200 
++ Fold1: alpha=0.3, lambda=200 
+- Fold1: alpha=0.3, lambda=200 
++ Fold1: alpha=0.4, lambda=200 
+- Fold1: alpha=0.4, lambda=200 
++ Fold1: alpha=0.5, lambda=200 
+- Fold1: alpha=0.5, lambda=200 
++ Fold1: alpha=0.6, lambda=200 
+- Fold1: alpha=0.6, lambda=200 
++ Fold1: alpha=0.7, lambda=200 
+- Fold1: alpha=0.7, lambda=200 
++ Fold1: alpha=0.8, lambda=200 
+- Fold1: alpha=0.8, lambda=200 
++ Fold1: alpha=0.9, lambda=200 
+- Fold1: alpha=0.9, lambda=200 
++ Fold1: alpha=1.0, lambda=200 
+- Fold1: alpha=1.0, lambda=200 
++ Fold2: alpha=0.0, lambda=200 
+- Fold2: alpha=0.0, lambda=200 
++ Fold2: alpha=0.1, lambda=200 
+- Fold2: alpha=0.1, lambda=200 
++ Fold2: alpha=0.2, lambda=200 
+- Fold2: alpha=0.2, lambda=200 
++ Fold2: alpha=0.3, lambda=200 
+- Fold2: alpha=0.3, lambda=200 
++ Fold2: alpha=0.4, lambda=200 
+- Fold2: alpha=0.4, lambda=200 
++ Fold2: alpha=0.5, lambda=200 
+- Fold2: alpha=0.5, lambda=200 
++ Fold2: alpha=0.6, lambda=200 
+- Fold2: alpha=0.6, lambda=200 
++ Fold2: alpha=0.7, lambda=200 
+- Fold2: alpha=0.7, lambda=200 
++ Fold2: alpha=0.8, lambda=200 
+- Fold2: alpha=0.8, lambda=200 
++ Fold2: alpha=0.9, lambda=200 
+- Fold2: alpha=0.9, lambda=200 
++ Fold2: alpha=1.0, lambda=200 
+- Fold2: alpha=1.0, lambda=200 
++ Fold3: alpha=0.0, lambda=200 
+- Fold3: alpha=0.0, lambda=200 
++ Fold3: alpha=0.1, lambda=200 
+- Fold3: alpha=0.1, lambda=200 
++ Fold3: alpha=0.2, lambda=200 
+- Fold3: alpha=0.2, lambda=200 
++ Fold3: alpha=0.3, lambda=200 
+- Fold3: alpha=0.3, lambda=200 
++ Fold3: alpha=0.4, lambda=200 
+- Fold3: alpha=0.4, lambda=200 
++ Fold3: alpha=0.5, lambda=200 
+- Fold3: alpha=0.5, lambda=200 
++ Fold3: alpha=0.6, lambda=200 
+- Fold3: alpha=0.6, lambda=200 
++ Fold3: alpha=0.7, lambda=200 
+- Fold3: alpha=0.7, lambda=200 
++ Fold3: alpha=0.8, lambda=200 
+- Fold3: alpha=0.8, lambda=200 
++ Fold3: alpha=0.9, lambda=200 
+- Fold3: alpha=0.9, lambda=200 
++ Fold3: alpha=1.0, lambda=200 
+- Fold3: alpha=1.0, lambda=200 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0.8, lambda = 1e-06 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0.8, lambda=0.0202 
+- Fold1: alpha=0.8, lambda=0.0202 
++ Fold2: alpha=0.8, lambda=0.0202 
+- Fold2: alpha=0.8, lambda=0.0202 
++ Fold3: alpha=0.8, lambda=0.0202 
+- Fold3: alpha=0.8, lambda=0.0202 
+Aggregating results
+Fitting final model on full training set
+i1 training completed.
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 13.44375 
+Training Median APE Error: 9.754094 
+Test Mean APE Error: 12.26964 
+Test Median APE Error: 8.811712 
+Super Off Training Values (APE > 50%):
+1135 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+118 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 15.44206 
+Training Median APE Error: 3.7196 
+Test Mean APE Error: 12.21242 
+Test Median APE Error: 4.084875 
+Super Off Training Values (APE > 50%):
+902 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+120 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 13.93248 
+Training Median APE Error: 9.095181 
+Test Mean APE Error: 12.25205 
+Test Median APE Error: 8.20886 
+Super Off Training Values (APE > 50%):
+2037 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+238 out of 11965 test Mn Signals are > 50% off.
+Inspecting data types before training...
+ num [1:90894, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
++ Fold1: alpha=0.0, lambda=200 
+- Fold1: alpha=0.0, lambda=200 
++ Fold1: alpha=0.1, lambda=200 
+- Fold1: alpha=0.1, lambda=200 
++ Fold1: alpha=0.2, lambda=200 
+- Fold1: alpha=0.2, lambda=200 
++ Fold1: alpha=0.3, lambda=200 
+- Fold1: alpha=0.3, lambda=200 
++ Fold1: alpha=0.4, lambda=200 
+- Fold1: alpha=0.4, lambda=200 
++ Fold1: alpha=0.5, lambda=200 
+- Fold1: alpha=0.5, lambda=200 
++ Fold1: alpha=0.6, lambda=200 
+- Fold1: alpha=0.6, lambda=200 
++ Fold1: alpha=0.7, lambda=200 
+- Fold1: alpha=0.7, lambda=200 
++ Fold1: alpha=0.8, lambda=200 
+- Fold1: alpha=0.8, lambda=200 
++ Fold1: alpha=0.9, lambda=200 
+- Fold1: alpha=0.9, lambda=200 
++ Fold1: alpha=1.0, lambda=200 
+- Fold1: alpha=1.0, lambda=200 
++ Fold2: alpha=0.0, lambda=200 
+- Fold2: alpha=0.0, lambda=200 
++ Fold2: alpha=0.1, lambda=200 
+- Fold2: alpha=0.1, lambda=200 
++ Fold2: alpha=0.2, lambda=200 
+- Fold2: alpha=0.2, lambda=200 
++ Fold2: alpha=0.3, lambda=200 
+- Fold2: alpha=0.3, lambda=200 
++ Fold2: alpha=0.4, lambda=200 
+- Fold2: alpha=0.4, lambda=200 
++ Fold2: alpha=0.5, lambda=200 
+- Fold2: alpha=0.5, lambda=200 
++ Fold2: alpha=0.6, lambda=200 
+- Fold2: alpha=0.6, lambda=200 
++ Fold2: alpha=0.7, lambda=200 
+- Fold2: alpha=0.7, lambda=200 
++ Fold2: alpha=0.8, lambda=200 
+- Fold2: alpha=0.8, lambda=200 
++ Fold2: alpha=0.9, lambda=200 
+- Fold2: alpha=0.9, lambda=200 
++ Fold2: alpha=1.0, lambda=200 
+- Fold2: alpha=1.0, lambda=200 
++ Fold3: alpha=0.0, lambda=200 
+- Fold3: alpha=0.0, lambda=200 
++ Fold3: alpha=0.1, lambda=200 
+- Fold3: alpha=0.1, lambda=200 
++ Fold3: alpha=0.2, lambda=200 
+- Fold3: alpha=0.2, lambda=200 
++ Fold3: alpha=0.3, lambda=200 
+- Fold3: alpha=0.3, lambda=200 
++ Fold3: alpha=0.4, lambda=200 
+- Fold3: alpha=0.4, lambda=200 
++ Fold3: alpha=0.5, lambda=200 
+- Fold3: alpha=0.5, lambda=200 
++ Fold3: alpha=0.6, lambda=200 
+- Fold3: alpha=0.6, lambda=200 
++ Fold3: alpha=0.7, lambda=200 
+- Fold3: alpha=0.7, lambda=200 
++ Fold3: alpha=0.8, lambda=200 
+- Fold3: alpha=0.8, lambda=200 
++ Fold3: alpha=0.9, lambda=200 
+- Fold3: alpha=0.9, lambda=200 
++ Fold3: alpha=1.0, lambda=200 
+- Fold3: alpha=1.0, lambda=200 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 1, lambda = 1e-06 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=0, lambda=1000 
+- Fold1: alpha=0, lambda=1000 
++ Fold2: alpha=0, lambda=1000 
+- Fold2: alpha=0, lambda=1000 
++ Fold3: alpha=0, lambda=1000 
+- Fold3: alpha=0, lambda=1000 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0, lambda = 0.0202 on full training set
++ Fold1: alpha=1, lambda=0.0202 
+- Fold1: alpha=1, lambda=0.0202 
++ Fold2: alpha=1, lambda=0.0202 
+- Fold2: alpha=1, lambda=0.0202 
++ Fold3: alpha=1, lambda=0.0202 
+- Fold3: alpha=1, lambda=0.0202 
+Aggregating results
+Fitting final model on full training set
+i2 training completed.
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 13.58518 
+Training Median APE Error: 9.830302 
+Test Mean APE Error: 12.52651 
+Test Median APE Error: 9.03668 
+Super Off Training Values (APE > 50%):
+1181 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+136 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 15.46966 
+Training Median APE Error: 3.894945 
+Test Mean APE Error: 12.32974 
+Test Median APE Error: 4.34274 
+Super Off Training Values (APE > 50%):
+910 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+124 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 14.04607 
+Training Median APE Error: 9.213188 
+Test Mean APE Error: 12.46601 
+Test Median APE Error: 8.452027 
+Super Off Training Values (APE > 50%):
+2091 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+260 out of 11965 test Mn Signals are > 50% off.
+Start Calculating Permutation Importance:
+Processing independent feature: mn 
+Processing independent feature: slice_rt 
+Processing independent feature: reference_mz 
+Processing independent feature: mn_mz 
+Processing independent feature: mn_baseline 
+Processing independent feature: mn_noise 
+Processing independent feature: mnminus1_to_mn_intensity 
+Processing independent feature: mn_to_mplus1_intensity 
+Processing independent feature: mplus1_intensity 
+Processing independent feature: mz_to_center 
+Processing independent feature: intensity_over_bg 
+Processing independent feature: intensity_over_ns 
+Processing independent feature: H 
+Processing independent feature: C 
+Processing independent feature: N 
+Processing independent feature: O 
+Processing independent feature: S 
+Processing independent feature: P 
+Processing independent feature: atom_number 
+Processing feature group: intensity_over_TIC_group 
+Processing feature group: mn_intensity_group 
+Processing feature group: total_ion_group 
+
+> sink() # end logging 

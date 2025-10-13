@@ -1,0 +1,249 @@
+
+
+> #######################################
+> ######################################
+> 
+> for (i in 1:num_rerun) 
++   {
++     cat("--------------------- ..." ... [TRUNCATED] 
+------------------------------------------------------
+Start running trial 1 out of total trials 1 by using random seed 2028 
+The used inner cross-validation fold is 3 
+The used number of trees in random forest training is 2000 
+The used depth of trees in random forest training is 5 
+------------------------------------------------------
+Uncorrected Mean Absolute Error of M1 RIA (%): 21.64302 
+Uncorrected Median Absolute Error of M1 RIA (%): 21.10212 
+Uncorrected sd of M1 RIA (%): 16.45435 
+Uncorrected Mean Absolute Error of M2 RIA (%): 43.78708 
+Uncorrected Median Absolute Error of M2 RIA (%): 46.64116 
+Uncorrected sd of M2 RIA (%): 15.67623 
+Inspecting data types before training...
+ num [1:68664, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
+Starting initial training on high-intensity data...
++ Fold1: mtry=5 
+- Fold1: mtry=5 
++ Fold2: mtry=5 
+- Fold2: mtry=5 
++ Fold3: mtry=5 
+- Fold3: mtry=5 
+Aggregating results
+Fitting final model on full training set
+Initial training completed.
+                            IncNodePurity
+mn                             191.227330
+slice_rt                        97.870505
+reference_mz                    80.274087
+mn_mz                          126.289884
+total_ion                       63.026745
+total_ion_smoothed              69.187605
+mn_intensity                   513.608748
+mn_intensity_smoothed          606.416740
+mn_baseline                     92.684450
+mn_noise                        64.078884
+mnminus1_to_mn_intensity       158.542288
+mn_to_mplus1_intensity          89.674784
+mplus1_intensity               289.955329
+mz_to_center                    99.679596
+intensity_over_TIC             848.068557
+intensity_over_TIC_smoothed    986.017835
+intensity_over_bg              115.678853
+intensity_over_ns              205.937013
+H                               38.777931
+C                               25.612110
+N                               34.451971
+O                               42.325681
+S                                5.509060
+P                                2.018632
+atom_number                     70.876886
+Training Performance (high-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 1.311083 
+Training Median APE Error: 0.3556224 
+Test Mean APE Error: 4.018664 
+Test Median APE Error: 1.538243 
+Super Off Training Values (APE > 50%):
+6 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+1 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 13.32782 
+Training Median APE Error: 2.276009 
+Test Mean APE Error: 9.915721 
+Test Median APE Error: 2.776824 
+Super Off Training Values (APE > 50%):
+932 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+117 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 4.250024 
+Training Median APE Error: 0.4126322 
+Test Mean APE Error: 5.831892 
+Test Median APE Error: 1.688063 
+Super Off Training Values (APE > 50%):
+938 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+118 out of 11965 test Mn Signals are > 50% off.
+Inspecting data types before training...
+ num [1:90894, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
+Starting initial training on all-intensity data...
++ Fold1: mtry=5 
+- Fold1: mtry=5 
++ Fold2: mtry=5 
+- Fold2: mtry=5 
++ Fold3: mtry=5 
+- Fold3: mtry=5 
+Aggregating results
+Fitting final model on full training set
+Initial training completed.
+                            IncNodePurity
+mn                             237.679664
+slice_rt                       229.415756
+reference_mz                   173.443374
+mn_mz                          266.754941
+total_ion                      141.118494
+total_ion_smoothed             145.395087
+mn_intensity                   684.474111
+mn_intensity_smoothed          748.006868
+mn_baseline                    164.611619
+mn_noise                       127.907936
+mnminus1_to_mn_intensity       337.077144
+mn_to_mplus1_intensity         201.994653
+mplus1_intensity               323.877634
+mz_to_center                   214.248277
+intensity_over_TIC            1177.186756
+intensity_over_TIC_smoothed   1373.070267
+intensity_over_bg              206.615279
+intensity_over_ns              334.734588
+H                               64.383992
+C                               52.527629
+N                               89.627106
+O                               98.860976
+S                                7.324843
+P                                6.545724
+atom_number                    128.142349
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 1.345098 
+Training Median APE Error: 0.360917 
+Test Mean APE Error: 4.215551 
+Test Median APE Error: 1.533811 
+Super Off Training Values (APE > 50%):
+7 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+1 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 2.576387 
+Training Median APE Error: 0.4954714 
+Test Mean APE Error: 6.730266 
+Test Median APE Error: 1.884892 
+Super Off Training Values (APE > 50%):
+30 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+29 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 1.646235 
+Training Median APE Error: 0.3753812 
+Test Mean APE Error: 4.988776 
+Test Median APE Error: 1.589147 
+Super Off Training Values (APE > 50%):
+37 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+30 out of 11965 test Mn Signals are > 50% off.
+Inspecting data types before training...
+ num [1:90894, 1:25] 0 1 2 0 1 2 0 1 2 0 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:25] "mn" "slice_rt" "reference_mz" "mn_mz" ...
+Starting iteration 2 training on all-intensity data...
++ Fold1: mtry=5 
+- Fold1: mtry=5 
++ Fold2: mtry=5 
+- Fold2: mtry=5 
++ Fold3: mtry=5 
+- Fold3: mtry=5 
+Aggregating results
+Fitting final model on full training set
+Initial training completed.
+                            IncNodePurity
+mn                             234.120092
+slice_rt                       310.700407
+reference_mz                   184.320306
+mn_mz                          296.673416
+total_ion                      186.396500
+total_ion_smoothed             200.592132
+mn_intensity                   722.854154
+mn_intensity_smoothed          867.003421
+mn_baseline                    226.934346
+mn_noise                       126.481559
+mnminus1_to_mn_intensity       409.769202
+mn_to_mplus1_intensity         249.201868
+mplus1_intensity               414.600702
+mz_to_center                   230.396321
+intensity_over_TIC            1196.454196
+intensity_over_TIC_smoothed   1368.824205
+intensity_over_bg              257.467196
+intensity_over_ns              360.719106
+H                               65.617066
+C                               56.570823
+N                              111.353859
+O                              111.219349
+S                                7.604329
+P                                7.154425
+atom_number                    135.303590
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 1.348777 
+Training Median APE Error: 0.3598627 
+Test Mean APE Error: 4.220297 
+Test Median APE Error: 1.515832 
+Super Off Training Values (APE > 50%):
+9 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+1 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 2.604949 
+Training Median APE Error: 0.5000344 
+Test Mean APE Error: 6.776516 
+Test Median APE Error: 1.858109 
+Super Off Training Values (APE > 50%):
+31 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+30 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 1.656 
+Training Median APE Error: 0.3762372 
+Test Mean APE Error: 5.006284 
+Test Median APE Error: 1.572277 
+Super Off Training Values (APE > 50%):
+40 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+31 out of 11965 test Mn Signals are > 50% off.
+Start Calculating Permutation Importance:
+Processing independent feature: mn 
+Processing independent feature: slice_rt 
+Processing independent feature: reference_mz 
+Processing independent feature: mn_mz 
+Processing independent feature: mn_baseline 
+Processing independent feature: mn_noise 
+Processing independent feature: mnminus1_to_mn_intensity 
+Processing independent feature: mn_to_mplus1_intensity 
+Processing independent feature: mplus1_intensity 
+Processing independent feature: mz_to_center 
+Processing independent feature: intensity_over_bg 
+Processing independent feature: intensity_over_ns 
+Processing independent feature: H 
+Processing independent feature: C 
+Processing independent feature: N 
+Processing independent feature: O 
+Processing independent feature: S 
+Processing independent feature: P 
+Processing independent feature: atom_number 
+Processing feature group: intensity_over_TIC_group 
+Processing feature group: mn_intensity_group 
+Processing feature group: total_ion_group 
+
+> sink() # end logging 
