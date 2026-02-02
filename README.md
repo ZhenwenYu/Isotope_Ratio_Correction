@@ -26,5 +26,7 @@ These inaccurate portions can still be used to train later iteration models, as 
 After all data has been clustered and pre-processed, the step 2b output files need to be copied to both "2cEN_Bias_Correction_by_ElasticNet" and "2cRF_Bias_Correction_by_RandomForest" folders.
 We tested both a linear Elastic Net model and a nonlinear Random Forest model to correct isotopic measurement bias. The Elastic Net method is faster but performs worse than the Random Forest method. Therefore, Step 2cEN can be skipped, and only Step 2cRF (Random Forest training) needs to be performed. A full Random Forest training session may take up to 12 hours and requires a minimum of 16 GB of RAM. However, once the final model is trained, it can be saved and used to correct future data without retraining. Due to GitHub size limitations, we include only the final model generated using a randomness seed of 2024 as an example.
 
+In folder "3Sig_Bias_Correction_by_Sigmoid_Top1," we also offered an alteranative simpler model, a single Mi intenisty/TIC feature based sigmoid model that can finish training and correction also first in scan level and then summed back to areas in mins, when correction speed and robustness are perferred over full accuracy.
+
 Finally, folder example_calculations contains examples showing how the fully trained Random Forest correction model could correct isotopic ratio measurement bias and a real application in MIDA.
 
