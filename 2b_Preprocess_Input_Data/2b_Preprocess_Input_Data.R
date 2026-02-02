@@ -292,19 +292,29 @@ if (length(target_rows) > 0) {
 
 # Next to plot for each slice what is the max intensity among m0m1m2 to check if 
 # Function to calculate the maximum mn intensity, considering the source
-calculate_max_mn_intensity <- function(row) {
-  if (row$source == "M0M1M2") {
-    return(max(c(row$m0_intensity, row$m1_intensity, row$m2_intensity), na.rm = TRUE))
-  } else {
-    return(max(c(row$m0_intensity, row$m1_intensity), na.rm = TRUE))
-  }
-}
+# calculate_max_mn_intensity <- function(row) {
+#   if (row$source == "M0M1M2") {
+#     return(max(c(row$m0_intensity, row$m1_intensity, row$m2_intensity), na.rm = TRUE))
+#   } else {
+#     return(max(c(row$m0_intensity, row$m1_intensity), na.rm = TRUE))
+#   }
+# }
 # Apply the function to each row to calculate the max mn intensity
+
 df_by_slice_combined <- df_by_slice_combined %>%
   rowwise() %>%
-  mutate(max_mn_intensity = calculate_max_mn_intensity(cur_data())) %>%
+  #mutate(max_mn_intensity = calculate_max_mn_intensity(cur_data())) %>%
+  #mutate(max_mn_intensity = calculate_max_mn_intensity(row = pick(everything()))) %>%
+  mutate(max_mn_intensity = if_else(source == "M0M1M2",
+                                    max(c(m0_intensity, m1_intensity, m2_intensity), na.rm = TRUE),
+                                    max(c(m0_intensity, m1_intensity), na.rm = TRUE))) %>%
   ungroup()
+
 # Calculate the maximum intensity for each row in df_by_slice_combined
+
+
+
+
 max_intensity_sub_b <- apply(df_by_slice_combined[, c("m0_intensity_sub_b", "m1_intensity_sub_b", "m2_intensity_sub_b")], 1, max, na.rm = TRUE)
 # Apply log10 transformation to the maximum intensity values
 log_max_intensity_sub_b <- log10(max_intensity_sub_b)
@@ -353,7 +363,7 @@ rm(expression)
 rm(log_max_intensity_sub_b)
 rm(max_intensity_sub_b)
 rm(calculate_medians)
-rm(calculate_max_mn_intensity)
+# rm(calculate_max_mn_intensity)
 rm(df_ggplot)
 
 #######################################
@@ -414,8 +424,48 @@ check_highest_predicted <- function(row) {
 # Create a new dataframe with the additional check_result column
 df_by_slice_combined_checked <- df_by_slice_combined %>%
   rowwise() %>%
-  mutate(check_result = check_highest_predicted(cur_data())) %>%
+  #mutate(check_result = check_highest_predicted(cur_data())) %>%
+  #mutate(check_result = check_highest_predicted(pick(everything())))
+
+  mutate(check_result = {
+    predicted_values <- c(m0_predicted, m1_predicted, m2_predicted)
+    sorted_indices <- order(predicted_values, decreasing = TRUE)
+    max_index <- sorted_indices[1]
+    second_max_index <- sorted_indices[2]
+    
+    case_when(
+      # integrated_to_area == 1 and difference < 0.1
+      integrated_to_area == 1 & (predicted_values[max_index] - predicted_values[second_max_index] < 0.1) ~
+        (max_index == 1 && (m0_intensity >= m1_intensity & m0_intensity >= m2_intensity)) ||
+        (max_index == 2 && (m1_intensity >= m0_intensity & m1_intensity >= m2_intensity)) ||
+        (max_index == 3 && (m2_intensity >= m0_intensity & m2_intensity >= m1_intensity)) ||
+        (second_max_index == 1 && (m0_intensity >= m1_intensity & m0_intensity >= m2_intensity)) ||
+        (second_max_index == 2 && (m1_intensity >= m0_intensity & m1_intensity >= m2_intensity)) ||
+        (second_max_index == 3 && (m2_intensity >= m0_intensity & m2_intensity >= m1_intensity)),
+      
+      # integrated_to_area == 1 and difference >= 0.1
+      integrated_to_area == 1 ~
+        (max_index == 1 && (m0_intensity >= m1_intensity & m0_intensity >= m2_intensity)) ||
+        (max_index == 2 && (m1_intensity >= m0_intensity & m1_intensity >= m2_intensity)) ||
+        (max_index == 3 && (m2_intensity >= m0_intensity & m2_intensity >= m1_intensity)),
+      
+      # integrated_to_area != 1 and difference < 0.1
+      predicted_values[max_index] - predicted_values[second_max_index] < 0.1 ~
+        (max_index == 1 && m0_intensity >= m1_intensity) ||
+        (max_index == 2 && m1_intensity >= m0_intensity) ||
+        (second_max_index == 1 && m0_intensity >= m1_intensity) ||
+        (second_max_index == 2 && m1_intensity >= m0_intensity),
+      
+      # integrated_to_area != 1 and difference >= 0.1
+      TRUE ~
+        (max_index == 1 && m0_intensity >= m1_intensity) ||
+        (max_index == 2 && m1_intensity >= m0_intensity)
+    )
+  }) %>%
   ungroup()
+
+
+
 # Filter the rows where check_result is FALSE and save in a separate dataframe
 df_by_slice_combined_false <- df_by_slice_combined_checked %>%
   filter(check_result == FALSE)

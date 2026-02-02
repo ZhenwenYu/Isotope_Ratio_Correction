@@ -51,16 +51,14 @@ source_python("mida_alg.py") # Two python files from https://github.com/naveedzi
 
 # IMPORTANT: change the peak and mzML file name in following lines accordingly
 Peak_list <- c(
-  "std_e1",
-  "std_e2",
-  "std_e3",
-  "std_e4"
+  "std_mix_1_msms",
+  "std_mix_4_neg_DDA",
+  "std_mix_highres"
 )
 mzML_list <- c(
-  "std_e1",
-  "std_e2",
-  "std_e3",
-  "std_e4"
+  "std_mix_1_msms",
+  "std_mix_4_neg_DDA",
+  "std_mix_highres"
 )
 
 # IMPORTANT: Tell codes the mass window of the mass spec method in Dalton
@@ -1182,7 +1180,7 @@ for (peak_list in Peak_list)
                                                 M1_FullPeak_max_pea_spe_score = NA,
                                                 M1_Slices_max_pea_spe_score = NA,
                                                 M2_FullPeak_max_pea_spe_score = NA,
-                                                M2_Slices_max_pea_spe_score = NA,,
+                                                M2_Slices_max_pea_spe_score = NA,
                                                 Warning = warningmessage
                                               )
                                   )

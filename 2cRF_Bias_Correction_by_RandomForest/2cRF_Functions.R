@@ -342,5 +342,5 @@ process_and_export_corrected_df <- function(df_by_mn_input, df_by_slice_input, d
     Corrected_Slice_Level = df_by_slice_corrected
   )
   
-  write_xlsx(output_list, path = paste0(output_prefix, "_seed", seed_i, "_2cRF_fig124.xlsx"))
+  write_xlsx(output_list, path = paste0(output_prefix, "_seed", seed_i, "_2cRF_table1.xlsx"))
 }

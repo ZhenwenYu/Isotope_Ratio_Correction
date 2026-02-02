@@ -1180,7 +1180,7 @@ for (peak_list in Peak_list)
                                                 M1_FullPeak_max_pea_spe_score = NA,
                                                 M1_Slices_max_pea_spe_score = NA,
                                                 M2_FullPeak_max_pea_spe_score = NA,
-                                                M2_Slices_max_pea_spe_score = NA,,
+                                                M2_Slices_max_pea_spe_score = NA,
                                                 Warning = warningmessage
                                               )
                                   )
