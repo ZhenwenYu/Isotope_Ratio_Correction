@@ -1,0 +1,136 @@
+
+
+> #######################################
+> ######################################
+> 
+> for (i in 1:num_rerun) 
++   {
++ 
++     cat("------------------ ..." ... [TRUNCATED] 
+------------------------------------------------------
+Start running trial 1 out of total trials 1 by using random seed 2024 
+The used inner cross-validation fold is 3 
+The used number of trees in random forest training is 2000 
+The used depth of trees in random forest training is 5 
+------------------------------------------------------
+Uncorrected Mean Absolute Error of M1 RIA (%): 21.64302 
+Uncorrected Median Absolute Error of M1 RIA (%): 21.10212 
+Uncorrected sd of M1 RIA (%): 16.45435 
+Uncorrected Mean Absolute Error of M2 RIA (%): 43.78708 
+Uncorrected Median Absolute Error of M2 RIA (%): 46.64116 
+Uncorrected sd of M2 RIA (%): 15.67623 
+Starting initial training on high-intensity data with a sigmoid model...
++ Fold1: dummy=1 
+- Fold1: dummy=1 
++ Fold2: dummy=1 
+- Fold2: dummy=1 
++ Fold3: dummy=1 
+- Fold3: dummy=1 
+Aggregating results
+Fitting final model on full training set
+Initial sigmoid training completed.
+                                   Warning
+1 No feature importance for sigmoid model.
+Training Performance (high-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 10.13071 
+Training Median APE Error: 4.148968 
+Test Mean APE Error: 8.181911 
+Test Median APE Error: 3.394375 
+Super Off Training Values (APE > 50%):
+1254 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+119 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 14.65085 
+Training Median APE Error: 3.408636 
+Test Mean APE Error: 10.44927 
+Test Median APE Error: 2.92858 
+Super Off Training Values (APE > 50%):
+878 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+98 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 0 model trained only by high-intensity data:
+Training Mean APE Error: 11.2362 
+Training Median APE Error: 4.031695 
+Test Mean APE Error: 8.879079 
+Test Median APE Error: 3.27745 
+Super Off Training Values (APE > 50%):
+2132 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+217 out of 11965 test Mn Signals are > 50% off.
+Starting iteration 1 training on all-intensity data with a sigmoid model...
++ Fold1: dummy=1 
+- Fold1: dummy=1 
++ Fold2: dummy=1 
+- Fold2: dummy=1 
++ Fold3: dummy=1 
+- Fold3: dummy=1 
+Aggregating results
+Fitting final model on full training set
+Initial sigmoid training completed.
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 10.01308 
+Training Median APE Error: 4.13025 
+Test Mean APE Error: 8.236809 
+Test Median APE Error: 3.310328 
+Super Off Training Values (APE > 50%):
+1232 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+130 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 14.30402 
+Training Median APE Error: 3.288463 
+Test Mean APE Error: 10.16874 
+Test Median APE Error: 2.663658 
+Super Off Training Values (APE > 50%):
+837 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+96 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 11.06252 
+Training Median APE Error: 3.986672 
+Test Mean APE Error: 8.830838 
+Test Median APE Error: 3.185615 
+Super Off Training Values (APE > 50%):
+2069 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+226 out of 11965 test Mn Signals are > 50% off.
+Starting iteration 2 training on all-intensity data with a sigmoid model...
++ Fold1: dummy=1 
+- Fold1: dummy=1 
++ Fold2: dummy=1 
+- Fold2: dummy=1 
++ Fold3: dummy=1 
+- Fold3: dummy=1 
+Aggregating results
+Fitting final model on full training set
+Initial sigmoid training completed.
+Training Performance (high-intensity data) of the iteration 1 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 10.00567 
+Training Median APE Error: 4.122979 
+Test Mean APE Error: 8.244323 
+Test Median APE Error: 3.307691 
+Super Off Training Values (APE > 50%):
+1228 out of 68664 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+132 out of 8286 test Mn Signals are > 50% off.
+Training Performance (low-intensity data) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 14.27581 
+Training Median APE Error: 3.29896 
+Test Mean APE Error: 10.14807 
+Test Median APE Error: 2.651774 
+Super Off Training Values (APE > 50%):
+837 out of 22230 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+94 out of 3679 test Mn Signals are > 50% off.
+Training Performance (high and low intensity data pooled) of the iteration 2 model trained by both high-intensity and pseudo-labeled low-intensity data:
+Training Mean APE Error: 11.05002 
+Training Median APE Error: 3.982973 
+Test Mean APE Error: 8.829686 
+Test Median APE Error: 3.182707 
+Super Off Training Values (APE > 50%):
+2065 out of 90894 training Mn Signals are > 50% off.
+Super Off Test Values (APE > 50%):
+226 out of 11965 test Mn Signals are > 50% off.
+
+> sink() # end logging 
